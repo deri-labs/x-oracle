@@ -1,0 +1,38 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/interfaces/IXOracle.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\ninterface IXOracle {\n\n    struct PriceStruct {\n        address id;\n        uint64 price;\n        uint64 conf;\n        uint32 decimals;\n        uint256 timestamp;\n    }\n\n    function getPrice(address id) external view returns (PriceStruct memory);\n    function updatePrice(bytes[] calldata updateData) external;\n}\n"
+    },
+    "contracts/XOracle.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.17;\n\nimport \"./interfaces/IXOracle.sol\";\n\ncontract XOracle is IXOracle {\n\n    address private _signer;\n    mapping(address => PriceStruct) private _prices;\n\n    constructor(address signer) {\n        _signer = signer;\n    }\n\n    function getPrice(address id) external view override returns (PriceStruct memory) {\n        return _prices[id];\n    }\n\n    function updatePrice(bytes[] calldata updateData) external override {\n        (PriceStruct memory _priceStruct,\n            uint8 v, bytes32 r, bytes32 s) = abi.decode(updateData[0], (PriceStruct, uint8, bytes32, bytes32));\n        bytes32 priceHash = keccak256(abi.encodePacked(\n            _priceStruct.id,\n            _priceStruct.price,\n            _priceStruct.conf,\n            _priceStruct.decimals,\n            _priceStruct.timestamp\n        ));\n        bytes32 signedHash = signedPriceHash(priceHash);\n        require(recoverSigner(signedHash, v, r, s) == _signer, \"XOracle: invalid signature\");\n        _prices[_priceStruct.id] = _priceStruct;\n    }\n\n    function signedPriceHash(bytes32 priceHash) public pure returns (bytes32) {\n        return keccak256(\n            abi.encodePacked(\n                \"\\x19Ethereum Signed Message:\\n32\",\n                priceHash\n            )\n        );\n    }\n\n    function recoverSigner(\n        bytes32 ethSignedMessageHash,\n        uint8 v,\n        bytes32 r,\n        bytes32 s\n    ) public pure returns (address) {\n        return ecrecover(ethSignedMessageHash, v, r, s);\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 100
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

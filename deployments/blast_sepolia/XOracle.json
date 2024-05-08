@@ -1,0 +1,258 @@
+{
+  "address": "0x43dA0713e0B84966F1E5C3ABd5ecdF2c805D9434",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "signer",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "id",
+          "type": "address"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "id",
+              "type": "address"
+            },
+            {
+              "internalType": "uint64",
+              "name": "price",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint64",
+              "name": "conf",
+              "type": "uint64"
+            },
+            {
+              "internalType": "uint32",
+              "name": "decimals",
+              "type": "uint32"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IXOracle.PriceStruct",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "ethSignedMessageHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "recoverSigner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "priceHash",
+          "type": "bytes32"
+        }
+      ],
+      "name": "signedPriceHash",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes[]",
+          "name": "updateData",
+          "type": "bytes[]"
+        }
+      ],
+      "name": "updatePrice",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x331d5be8b724922017b22badf0f100ed0e98c2321e358830aa12826505f44d0d",
+  "receipt": {
+    "to": null,
+    "from": "0xafc183BE937367B219F9283916d352f2C03ff512",
+    "contractAddress": "0x43dA0713e0B84966F1E5C3ABd5ecdF2c805D9434",
+    "transactionIndex": 2,
+    "gasUsed": "466336",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xa44511c72c2c504d436ea49981e567b5e9a5ca7f3dbd4a710f0177e2a1d189c0",
+    "transactionHash": "0x331d5be8b724922017b22badf0f100ed0e98c2321e358830aa12826505f44d0d",
+    "logs": [],
+    "blockNumber": 5191496,
+    "cumulativeGasUsed": "577113",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xbcf3d5dc59eeb5b2ae74ffab69746bf53e21d2fc"
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "14d20441c1852578903e94ef9e083ccd",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"signer\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"id\",\"type\":\"address\"}],\"name\":\"getPrice\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"id\",\"type\":\"address\"},{\"internalType\":\"uint64\",\"name\":\"price\",\"type\":\"uint64\"},{\"internalType\":\"uint64\",\"name\":\"conf\",\"type\":\"uint64\"},{\"internalType\":\"uint32\",\"name\":\"decimals\",\"type\":\"uint32\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"internalType\":\"struct IXOracle.PriceStruct\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"ethSignedMessageHash\",\"type\":\"bytes32\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"recoverSigner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"priceHash\",\"type\":\"bytes32\"}],\"name\":\"signedPriceHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes[]\",\"name\":\"updateData\",\"type\":\"bytes[]\"}],\"name\":\"updatePrice\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/XOracle.sol\":\"XOracle\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"contracts/XOracle.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.17;\\n\\nimport \\\"./interfaces/IXOracle.sol\\\";\\n\\ncontract XOracle is IXOracle {\\n\\n    address private _signer;\\n    mapping(address => PriceStruct) private _prices;\\n\\n    constructor(address signer) {\\n        _signer = signer;\\n    }\\n\\n    function getPrice(address id) external view override returns (PriceStruct memory) {\\n        return _prices[id];\\n    }\\n\\n    function updatePrice(bytes[] calldata updateData) external override {\\n        (PriceStruct memory _priceStruct,\\n            uint8 v, bytes32 r, bytes32 s) = abi.decode(updateData[0], (PriceStruct, uint8, bytes32, bytes32));\\n        bytes32 priceHash = keccak256(abi.encodePacked(\\n            _priceStruct.id,\\n            _priceStruct.price,\\n            _priceStruct.conf,\\n            _priceStruct.decimals,\\n            _priceStruct.timestamp\\n        ));\\n        bytes32 signedHash = signedPriceHash(priceHash);\\n        require(recoverSigner(signedHash, v, r, s) == _signer, \\\"XOracle: invalid signature\\\");\\n        _prices[_priceStruct.id] = _priceStruct;\\n    }\\n\\n    function signedPriceHash(bytes32 priceHash) public pure returns (bytes32) {\\n        return keccak256(\\n            abi.encodePacked(\\n                \\\"\\\\x19Ethereum Signed Message:\\\\n32\\\",\\n                priceHash\\n            )\\n        );\\n    }\\n\\n    function recoverSigner(\\n        bytes32 ethSignedMessageHash,\\n        uint8 v,\\n        bytes32 r,\\n        bytes32 s\\n    ) public pure returns (address) {\\n        return ecrecover(ethSignedMessageHash, v, r, s);\\n    }\\n}\\n\",\"keccak256\":\"0xc11582928cf53cbe5bc157359f5c39535cc5d0d4c668e58b992142d4c994cc39\",\"license\":\"MIT\"},\"contracts/interfaces/IXOracle.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.17;\\n\\ninterface IXOracle {\\n\\n    struct PriceStruct {\\n        address id;\\n        uint64 price;\\n        uint64 conf;\\n        uint32 decimals;\\n        uint256 timestamp;\\n    }\\n\\n    function getPrice(address id) external view returns (PriceStruct memory);\\n    function updatePrice(bytes[] calldata updateData) external;\\n}\\n\",\"keccak256\":\"0xc25ce8b504356a472dc6e2e942b958aabd145fe71a0d63bdd1365aae27d7c635\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161079b38038061079b83398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b610708806100936000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c80632592c0bf146100515780633a1aad3c1461006657806341976e091461008c578063d45167d014610193575b600080fd5b61006461005f366004610468565b6101be565b005b6100796100743660046104dc565b6103ad565b6040519081526020015b60405180910390f35b61013961009a366004610511565b6040805160a081018252600080825260208201819052918101829052606081018290526080810191909152506001600160a01b03908116600090815260016020818152604092839020835160a08101855281549586168152600160a01b9095046001600160401b03908116928601929092529182015490811692840192909252600160401b90910463ffffffff16606083015260020154608082015290565b6040805182516001600160a01b031681526020808401516001600160401b039081169183019190915283830151169181019190915260608083015163ffffffff16908201526080918201519181019190915260a001610083565b6101a66101a1366004610544565b610400565b6040516001600160a01b039091168152602001610083565b600080600080858560008181106101d7576101d761057f565b90506020028101906101e99190610595565b8101906101f6919061060d565b935093509350935060008460000151856020015186604001518760600151886080015160405160200161027995949392919060609590951b6001600160601b031916855260c093841b6001600160c01b031990811660148701529290931b909116601c84015260e01b6001600160e01b0319166024830152602882015260480190565b604051602081830303815290604052805190602001209050600061029c826103ad565b6000549091506001600160a01b03166102b782878787610400565b6001600160a01b0316146103115760405162461bcd60e51b815260206004820152601a60248201527f584f7261636c653a20696e76616c6964207369676e6174757265000000000000604482015260640160405180910390fd5b505083516001600160a01b0390811660009081526001602081815260409283902088518154928a01516001600160401b03908116600160a01b026001600160e01b03199094169190961617919091178155918701519082018054606089015163ffffffff16600160401b026001600160601b03199091169290941691909117929092179091556080909401516002909401939093555050505050565b6040517f19457468657265756d205369676e6564204d6573736167653a0a3332000000006020820152603c8101829052600090605c01604051602081830303815290604052805190602001209050919050565b6040805160008082526020820180845287905260ff861692820192909252606081018490526080810183905260019060a0016020604051602081039080840390855afa158015610454573d6000803e3d6000fd5b5050604051601f1901519695505050505050565b6000806020838503121561047b57600080fd5b82356001600160401b038082111561049257600080fd5b818501915085601f8301126104a657600080fd5b8135818111156104b557600080fd5b8660208260051b85010111156104ca57600080fd5b60209290920196919550909350505050565b6000602082840312156104ee57600080fd5b5035919050565b80356001600160a01b038116811461050c57600080fd5b919050565b60006020828403121561052357600080fd5b61052c826104f5565b9392505050565b803560ff8116811461050c57600080fd5b6000806000806080858703121561055a57600080fd5b8435935061056a60208601610533565b93969395505050506040820135916060013590565b634e487b7160e01b600052603260045260246000fd5b6000808335601e198436030181126105ac57600080fd5b8301803591506001600160401b038211156105c657600080fd5b6020019150368190038213156105db57600080fd5b9250929050565b80356001600160401b038116811461050c57600080fd5b803563ffffffff8116811461050c57600080fd5b60008060008084860361010081121561062557600080fd5b60a081121561063357600080fd5b5060405160a081018181106001600160401b038211171561066457634e487b7160e01b600052604160045260246000fd5b604052610670866104f5565b815261067e602087016105e2565b602082015261068f604087016105e2565b60408201526106a0606087016105f9565b60608201526080868101359082015293506106bd60a08601610533565b939693955050505060c08201359160e001359056fea26469706673582212204995345bf919ee0e9e9c0b59af9bc25dd6f31f6782ca1d435aa745b1d9be12f664736f6c63430008110033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c80632592c0bf146100515780633a1aad3c1461006657806341976e091461008c578063d45167d014610193575b600080fd5b61006461005f366004610468565b6101be565b005b6100796100743660046104dc565b6103ad565b6040519081526020015b60405180910390f35b61013961009a366004610511565b6040805160a081018252600080825260208201819052918101829052606081018290526080810191909152506001600160a01b03908116600090815260016020818152604092839020835160a08101855281549586168152600160a01b9095046001600160401b03908116928601929092529182015490811692840192909252600160401b90910463ffffffff16606083015260020154608082015290565b6040805182516001600160a01b031681526020808401516001600160401b039081169183019190915283830151169181019190915260608083015163ffffffff16908201526080918201519181019190915260a001610083565b6101a66101a1366004610544565b610400565b6040516001600160a01b039091168152602001610083565b600080600080858560008181106101d7576101d761057f565b90506020028101906101e99190610595565b8101906101f6919061060d565b935093509350935060008460000151856020015186604001518760600151886080015160405160200161027995949392919060609590951b6001600160601b031916855260c093841b6001600160c01b031990811660148701529290931b909116601c84015260e01b6001600160e01b0319166024830152602882015260480190565b604051602081830303815290604052805190602001209050600061029c826103ad565b6000549091506001600160a01b03166102b782878787610400565b6001600160a01b0316146103115760405162461bcd60e51b815260206004820152601a60248201527f584f7261636c653a20696e76616c6964207369676e6174757265000000000000604482015260640160405180910390fd5b505083516001600160a01b0390811660009081526001602081815260409283902088518154928a01516001600160401b03908116600160a01b026001600160e01b03199094169190961617919091178155918701519082018054606089015163ffffffff16600160401b026001600160601b03199091169290941691909117929092179091556080909401516002909401939093555050505050565b6040517f19457468657265756d205369676e6564204d6573736167653a0a3332000000006020820152603c8101829052600090605c01604051602081830303815290604052805190602001209050919050565b6040805160008082526020820180845287905260ff861692820192909252606081018490526080810183905260019060a0016020604051602081039080840390855afa158015610454573d6000803e3d6000fd5b5050604051601f1901519695505050505050565b6000806020838503121561047b57600080fd5b82356001600160401b038082111561049257600080fd5b818501915085601f8301126104a657600080fd5b8135818111156104b557600080fd5b8660208260051b85010111156104ca57600080fd5b60209290920196919550909350505050565b6000602082840312156104ee57600080fd5b5035919050565b80356001600160a01b038116811461050c57600080fd5b919050565b60006020828403121561052357600080fd5b61052c826104f5565b9392505050565b803560ff8116811461050c57600080fd5b6000806000806080858703121561055a57600080fd5b8435935061056a60208601610533565b93969395505050506040820135916060013590565b634e487b7160e01b600052603260045260246000fd5b6000808335601e198436030181126105ac57600080fd5b8301803591506001600160401b038211156105c657600080fd5b6020019150368190038213156105db57600080fd5b9250929050565b80356001600160401b038116811461050c57600080fd5b803563ffffffff8116811461050c57600080fd5b60008060008084860361010081121561062557600080fd5b60a081121561063357600080fd5b5060405160a081018181106001600160401b038211171561066457634e487b7160e01b600052604160045260246000fd5b604052610670866104f5565b815261067e602087016105e2565b602082015261068f604087016105e2565b60408201526106a0606087016105f9565b60608201526080868101359082015293506106bd60a08601610533565b939693955050505060c08201359160e001359056fea26469706673582212204995345bf919ee0e9e9c0b59af9bc25dd6f31f6782ca1d435aa745b1d9be12f664736f6c63430008110033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 6,
+        "contract": "contracts/XOracle.sol:XOracle",
+        "label": "_signer",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 11,
+        "contract": "contracts/XOracle.sol:XOracle",
+        "label": "_prices",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_struct(PriceStruct)161_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_struct(PriceStruct)161_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct IXOracle.PriceStruct)",
+        "numberOfBytes": "32",
+        "value": "t_struct(PriceStruct)161_storage"
+      },
+      "t_struct(PriceStruct)161_storage": {
+        "encoding": "inplace",
+        "label": "struct IXOracle.PriceStruct",
+        "members": [
+          {
+            "astId": 152,
+            "contract": "contracts/XOracle.sol:XOracle",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 154,
+            "contract": "contracts/XOracle.sol:XOracle",
+            "label": "price",
+            "offset": 20,
+            "slot": "0",
+            "type": "t_uint64"
+          },
+          {
+            "astId": 156,
+            "contract": "contracts/XOracle.sol:XOracle",
+            "label": "conf",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint64"
+          },
+          {
+            "astId": 158,
+            "contract": "contracts/XOracle.sol:XOracle",
+            "label": "decimals",
+            "offset": 8,
+            "slot": "1",
+            "type": "t_uint32"
+          },
+          {
+            "astId": 160,
+            "contract": "contracts/XOracle.sol:XOracle",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "96"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint32": {
+        "encoding": "inplace",
+        "label": "uint32",
+        "numberOfBytes": "4"
+      },
+      "t_uint64": {
+        "encoding": "inplace",
+        "label": "uint64",
+        "numberOfBytes": "8"
+      }
+    }
+  }
+}

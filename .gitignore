@@ -1,0 +1,18 @@
+node_modules
+.env
+coverage
+coverage.json
+typechain
+
+#Hardhat files
+cache
+artifacts
+
+#Local files
+.DS_Store
+secret.json
+.idea
+/typechain-types/
+/docs/
+/artifacts-zk/
+/cache-zk/
