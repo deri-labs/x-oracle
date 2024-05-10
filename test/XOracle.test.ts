@@ -14,7 +14,7 @@ describe("XOracle", async () => {
         ({owner, user1, oracle} = await deployFixture());
     });
 
-    it("check oracle verify and update", async () => {
+    it("check oracle update price suc", async () => {
         let timestamp = getCurrentTimestamp();
         let data = [BTC_ID, 60000, 10, 0, timestamp];
         let packedData = ethers.utils.solidityPack(["address", "uint64", "uint64", "uint32", "uint256"], data);

@@ -16,3 +16,4 @@ secret.json
 /docs/
 /artifacts-zk/
 /cache-zk/
+/.npmrc
