@@ -1,5 +1,4 @@
-import {deployContract, deployFixture} from "../helpers/utils";
-import {ethers} from "hardhat";
+import {deployContract} from "../helpers/utils";
 import {BTC_ID} from "../helpers/ids";
 import {getCurrentTimestamp} from "hardhat/internal/hardhat-network/provider/utils/getCurrentTimestamp";
 import {expect} from "chai";
