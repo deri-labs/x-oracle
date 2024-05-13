@@ -20,28 +20,14 @@ contract MockXOracle is IXOracle {
         uint64 conf,
         uint32 decimals,
         uint256 timestamp
-    ) external view returns (bytes[] memory updateData){
+    ) external pure returns (bytes[] memory updateData){
         PriceStruct memory _priceStruct = PriceStruct(id, price, conf, decimals, timestamp);
-        bytes32 priceHash = keccak256(abi.encodePacked(
-            _priceStruct.id,
-            _priceStruct.price,
-            _priceStruct.conf,
-            _priceStruct.decimals,
-            _priceStruct.timestamp
-        ));
         updateData = new bytes[](1);
         updateData[0] = abi.encode(_priceStruct);
     }
 
     function updatePrice(bytes[] calldata updateData) external override {
         (PriceStruct memory _priceStruct) = abi.decode(updateData[0], (PriceStruct));
-        bytes32 priceHash = keccak256(abi.encodePacked(
-            _priceStruct.id,
-            _priceStruct.price,
-            _priceStruct.conf,
-            _priceStruct.decimals,
-            _priceStruct.timestamp
-        ));
         _prices[_priceStruct.id] = _priceStruct;
     }
 
