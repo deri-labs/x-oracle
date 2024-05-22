@@ -1,5 +1,5 @@
 import {ethers} from "hardhat";
-import {WOJAK_ID} from "../helpers/ids";
+import {ANDY_ID} from "../helpers/ids";
 
 async function update() {
 
@@ -9,7 +9,7 @@ async function update() {
 
     await (await xOracle.updatePrice(updateData));
 
-    let price = await xOracle.getPrice(WOJAK_ID);
+    let price = await xOracle.getPrice(ANDY_ID);
     console.log(price.id)
     console.log(price.price)
     console.log(price.conf)

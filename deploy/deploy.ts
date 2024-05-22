@@ -19,4 +19,4 @@ const func: DeployFunction = async function ({deployments, getNamedAccounts, net
 };
 
 export default func;
-func.tags = ['zkdx'];
+func.tags = ['x-oracle'];

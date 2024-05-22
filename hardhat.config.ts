@@ -94,9 +94,9 @@ const config: HardhatUserConfig = {
             url: secret.url_blast_mainnet,
             accounts: [secret.key_prd, secret.key_same_nonce]
         },
-        zklink_testnet: {
+        zklink_sepolia: {
             zksync: true,
-            url: secret.url_zklink_testnet,
+            url: secret.url_zklink_sepolia,
             accounts: [secret.key_dev]
         },
         zklink_mainnet: {
